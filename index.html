@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Campus Hub - Welcome</title>
+        <style>
+            :root {
+                --text: #010c10;
+                --background: #f2fbfe;
+                --primary: #26b0f0;
+                --secondary: #f683a7;
+                --accent: #f39655;
+            }
+
+            body {
+                font-family: "Arial", sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: var(--background);
+                color: var(--text);
+                line-height: 1.6;
+            }
+
+            header {
+                background-color: var(--primary);
+                color: white;
+                padding: 2rem 1rem;
+                text-align: center;
+                font-size: 2rem;
+                font-weight: bold;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 2rem auto;
+                padding: 1rem;
+                text-align: center;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .container h1 {
+                color: var(--primary);
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .container p {
+                color: var(--text);
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
+            }
+
+            .links {
+                display: flex;
+                justify-content: center;
+                gap: 1.5rem;
+            }
+
+            .link-btn {
+                display: inline-block;
+                padding: 1rem 2rem;
+                text-decoration: none;
+                color: white;
+                font-size: 1rem;
+                border-radius: 5px;
+                font-weight: bold;
+                transition:
+                    background-color 0.3s ease,
+                    transform 0.2s ease;
+            }
+
+            .link-btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            }
+
+            .link-btn.privacy {
+                background-color: var(--secondary);
+            }
+
+            .link-btn.privacy:hover {
+                background-color: var(--accent);
+            }
+
+            .link-btn.terms {
+                background-color: var(--primary);
+            }
+
+            .link-btn.terms:hover {
+                background-color: var(--secondary);
+            }
+
+            footer {
+                margin-top: 2rem;
+                text-align: center;
+                padding: 1rem;
+                background-color: var(--primary);
+                color: white;
+                font-size: 0.9rem;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>Welcome to Campus Hub</header>
+
+        <div class="container">
+            <h1>Welcome, You’re All Set!</h1>
+            <p>
+                Your email has been verified successfully. Now, you're ready to
+                start using Campus Hub!
+            </p>
+            <div class="links">
+                <a href="privacy-policy.html" class="link-btn privacy"
+                    >Privacy Policy</a
+                >
+                <a href="terms-and-conditions.html" class="link-btn terms"
+                    >Terms and Conditions</a
+                >
+            </div>
+        </div>
+
+        <footer>
+            &copy; <span id="year"></span> Campus Hub | All Rights Reserved
+        </footer>
+
+        <script>
+            document.getElementById("year").textContent =
+                new Date().getFullYear();
+        </script>
+    </body>
+</html>
