@@ -5,6 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Campus Hub - Welcome</title>
         <style>
+            html,
+            body {
+                height: 100%;
+                margin: 0;
+            }
             :root {
                 --text: #010c10;
                 --background: #ffffff;
@@ -16,123 +21,98 @@
             body {
                 font-family: "Arial", sans-serif;
                 margin: 0;
-                padding: 0;
-                background-color: var(--background);
-                color: var(--text);
-                line-height: 1.6;
-            }
-
-            header {
-                background-color: var(--primary);
-                color: white;
-                padding: 2rem 1rem;
-                text-align: center;
-                font-size: 2rem;
-                font-weight: bold;
-            }
-
-            .container {
-                max-width: 800px;
-                margin: 2rem auto;
                 padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                alii-items: center;
+                background-color: #fff;
+            }
+
+            h1 {
                 text-align: center;
-                background: white;
-                border-radius: 8px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                margin-top: 2rem;
             }
 
-            .container h1 {
-                color: var(--primary);
-                font-size: 2rem;
-                margin-bottom: 1rem;
+            .subtitle {
+                text-align: center;
+                margin-top: 1rem;
+                font-size: 1.2rem;
+                max-width: 800px;
+                align-self: center;
+                line-height: 1.5;
             }
 
-            .container p {
-                color: var(--text);
-                font-size: 1.1rem;
-                margin-bottom: 2rem;
+            iframe {
+                border: none;
+                border-radius: 1rem;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 800px;
+                aspect-ratio: 16 / 9;
+                align-self: center;
+                margin-top: 2rem;
+            }
+
+            .images {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .images img {
+                border-radius: 1rem;
+                width: 100%;
+                max-width: 70vw;
             }
 
             .links {
                 display: flex;
+                align-items: center;
                 justify-content: center;
                 gap: 1.5rem;
             }
 
-            .link-btn {
-                display: inline-block;
-                padding: 1rem 2rem;
-                text-decoration: none;
-                color: white;
-                font-size: 1rem;
-                border-radius: 5px;
-                font-weight: bold;
-                transition:
-                    background-color 0.3s ease,
-                    transform 0.2s ease;
-            }
-
-            .link-btn:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-            }
-
-            .link-btn.privacy {
-                background-color: var(--secondary);
-            }
-
-            .link-btn.privacy:hover {
-                background-color: var(--accent);
-            }
-
-            .link-btn.terms {
-                background-color: var(--primary);
-            }
-
-            .link-btn.terms:hover {
-                background-color: var(--secondary);
-            }
-
-            .link-btn.deletion {
-                background-color: #f44336;
-            }
-
-            .link-btn.deletion:hover {
-                background-color: #d32f2f;
-            }
-
             footer {
-                margin-top: 2rem;
+                margin-top: auto;
                 text-align: center;
                 padding: 1rem;
-                background-color: var(--primary);
-                color: white;
                 font-size: 0.9rem;
-                border-top-left-radius: 8px;
-                border-top-right-radius: 8px;
             }
         </style>
     </head>
     <body>
-        <header>Welcome to Campus Hub</header>
+        <h1>Campus Hub - Buy and Sell Books Among University Students</h1>
 
-        <div class="container">
-            <h1>Welcome, You’re All Set!</h1>
+        <span class="subtitle">
+            University books are often expensive, and Campus Hub bridges the gap
+            by enabling students to buy second-hand books from each other at
+            reasonable prices. This not only makes education more affordable but
+            also promotes sustainability by reusing books, reducing waste, and
+            indirectly contributing to saving trees.
+        </span>
 
-            <div class="links">
-                <a href="privacy-policy.html" class="link-btn privacy"
-                    >Privacy Policy</a
-                >
-                <a href="terms-and-conditions.html" class="link-btn terms"
-                    >Terms and Conditions</a
-                >
-                <a href="contact.html" class="link-btn deletion"
-                    >Request Data Deletion</a
-                >
-            </div>
+        <iframe
+            src="https://www.youtube.com/embed/kcXzDxx9RU4"
+            title="Campus Hub"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+        ></iframe>
+
+        <div class="images">
+            <img src="assets/1.png" alt="app images" />
+            <img src="assets/2.png" alt="app images" />
+            <img src="assets/3.png" alt="app images" />
         </div>
 
         <footer>
+            <div class="links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-and-conditions.html">Terms and Conditions</a>
+                <a href="contact.html">Request Data Deletion</a>
+            </div>
+
             &copy; <span id="year"></span> Campus Hub | All Rights Reserved
         </footer>
 
